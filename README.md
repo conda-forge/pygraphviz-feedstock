@@ -19,14 +19,16 @@ interface to NetworkX (http://networkx.github.io).
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pygraphviz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pygraphviz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pygraphviz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pygraphviz-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pygraphviz-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pygraphviz-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pygraphviz-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pygraphviz-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pygraphviz/badges/version.svg)](https://anaconda.org/conda-forge/pygraphviz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pygraphviz/badges/downloads.svg)](https://anaconda.org/conda-forge/pygraphviz)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pygraphviz-green.svg)](https://anaconda.org/conda-forge/pygraphviz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pygraphviz.svg)](https://anaconda.org/conda-forge/pygraphviz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pygraphviz.svg)](https://anaconda.org/conda-forge/pygraphviz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pygraphviz.svg)](https://anaconda.org/conda-forge/pygraphviz) |
 
 Installing pygraphviz
 =====================
