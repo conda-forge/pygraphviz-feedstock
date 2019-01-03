@@ -12,10 +12,7 @@ source:
   sha256: 50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d
 
 build:
-  number: 1000
-  # It is possible to add windows support, but the
-  # graphviz win package is not ready for it yet
-  skip: True  # [win]
+  number: 1001
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
