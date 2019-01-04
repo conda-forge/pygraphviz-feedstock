@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.zip
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: 50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d
