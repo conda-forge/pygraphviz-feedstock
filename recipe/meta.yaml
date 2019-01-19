@@ -14,7 +14,7 @@ source:
 build:
   number: 1001
   script: python -m pip install --no-deps --ignore-installed .  # [not win]
-  script: python setup.py install --single-version-externally-managed --record=record.txt --include-path=%LIBRARY_INC% --library-path=%LIBRARY_LIB%  # [win]
+  script: python setup.py install --single-version-externally-managed --record=record.txt --include-path=%LIBRARY_INC%/graphviz --library-path=%LIBRARY_LIB%/graphviz  # [win]
 
 
 requirements:
