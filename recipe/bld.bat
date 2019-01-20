@@ -1,1 +1,1 @@
-python -m pip install --no-deps --ignore-installed --global-option=build_ext --global-option="-I%LIBRARY_INC%\graphviz" --global-option="-L%LIBRARY_LIB%\graphviz" .
+python setup.py install --single-version-externally-managed --record=record.txt --include-path=%LIBRARY_INC%/graphviz --library-path=%LIBRARY_LIB%/graphviz
