@@ -1,5 +1,7 @@
 {% set name = "pygraphviz" %}
 {% set version = "1.5" %}
+{% set sha256 = "50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d" %}
+
 
 package:
   name: {{ name|lower }}
@@ -9,10 +11,15 @@ source:
   fn: {{ name }}-{{ version }}.zip
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d
+  sha256: {{ sha256 }}
+  patches:
+    # This patch seem to be needed to build on Windows. 
+    # See https://github.com/pygraphviz/pygraphviz/issues/74#issuecomment-413885258
+    - 0001-Patch-pygraphyviz.patch  # [win]
+
 
 build:
-  number: 1001
+  number: 1002
   script: python -m pip install --no-deps --ignore-installed .  # [not win]
 
 
