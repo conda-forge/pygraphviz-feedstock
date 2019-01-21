@@ -1,4 +1,4 @@
-From 21d5720a26a1d6ae453b222f46332644597bc307 Mon Sep 17 00:00:00 2001
+From efd434353373e56715dddaec337a0cf99d586211 Mon Sep 17 00:00:00 2001
 From: Morten Enemark Lund <melund@gmail.com>
 Date: Mon, 21 Jan 2019 08:54:51 +0100
 Subject: [PATCH] Patch pygraphyviz
@@ -50,7 +50,7 @@ index 68265ce..7cd674f 100644
          return NULL;
      }
 diff --git a/pygraphviz/graphviz_wrap.c b/pygraphviz/graphviz_wrap.c
-index adf0411..fcb82b5 100644
+index 3b0b75d..00f02e1 100644
 --- a/pygraphviz/graphviz_wrap.c
 +++ b/pygraphviz/graphviz_wrap.c
 @@ -2988,7 +2988,18 @@ static swig_module_info swig_module = {swig_types, 8, 0, 0, 0, 0};
