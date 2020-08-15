@@ -10,11 +10,6 @@ source:
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: 411ae84a5bc313e3e1523a1cace59159f512336318a510573b47f824edef8860
-  patches:
-    # https://github.com/pygraphviz/pygraphviz/pull/178/
-    - 0001-Fix-graphviz_wrap.c-_wrap_agwrite-for-Pypy3.patch
-    # https://github.com/pygraphviz/pygraphviz/pull/212
-    - 0002-Fix-graphviz_wrap.c-_wrap_agread-for-Pypy3.patch
 
 build:
   number: 0
