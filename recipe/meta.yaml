@@ -25,10 +25,10 @@ requirements:
   host:
     - python
     - pip
-    - graphviz 2.38.*
+    - graphviz
   run:
     - python
-    - graphviz 2.38.*
+    - graphviz
 
 test:
   imports:
