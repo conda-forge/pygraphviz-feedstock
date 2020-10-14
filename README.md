@@ -3,7 +3,7 @@ About pygraphviz
 
 Home: http://pygraphviz.github.io
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pygraphviz-feedstock/blob/master/LICENSE.txt)
 
