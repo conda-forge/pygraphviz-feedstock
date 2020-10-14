@@ -12,7 +12,7 @@ source:
   sha256: 411ae84a5bc313e3e1523a1cace59159f512336318a510573b47f824edef8860
 
 build:
-  number: 0
+  number: 1
   # It is possible to add windows support, but the
   # graphviz win package is not ready for it yet
   skip: true  # [win]
@@ -46,7 +46,7 @@ test:
 
 about:
   home: http://pygraphviz.github.io
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Python interface to Graphviz
