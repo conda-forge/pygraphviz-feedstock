@@ -1,5 +1,5 @@
 {% set name = "pygraphviz" %}
-{% set version = "1.6" %}
+{% set version = "1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 411ae84a5bc313e3e1523a1cace59159f512336318a510573b47f824edef8860
+  sha256: a7bec6609f37cf1e64898c59f075afd659106cf9356c5f387cecaa2e0cdb2304
 
 build:
-  number: 1
+  number: 0
   # It is possible to add windows support, but the
   # graphviz win package is not ready for it yet
   skip: true  # [win]
