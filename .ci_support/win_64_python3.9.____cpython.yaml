@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 graphviz:
-- '2.46'
+- '2.47'
 pin_run_as_build:
   graphviz:
     max_pin: x
