@@ -1,5 +1,5 @@
 {% set name = "pygraphviz" %}
-{% set version = "1.8" %}
+{% set version = "1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: eb2e25a2c647044e7b66b5a159be64daaef24b549fcf535c241369d6e6e09c45
+  sha256: fa18f7c6cea28341a4e466ed0cf05682b0a68288afe8dd7c9426782f7c1ae01c
 
 build:
   number: 0
