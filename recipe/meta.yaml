@@ -10,6 +10,8 @@ source:
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: fa18f7c6cea28341a4e466ed0cf05682b0a68288afe8dd7c9426782f7c1ae01c
+  patches:
+    - 0001-Ensure-define_macros-remains-a-list-on-Windows.patch
 
 build:
   number: 1
