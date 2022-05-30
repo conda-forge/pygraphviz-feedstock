@@ -1,0 +1,26 @@
+From 84a8f6a49b1181b2a091350a88cc1ca368428361 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Sun, 5 Jun 2022 17:43:05 -0400
+Subject: [PATCH 2/2] AGraph: Don't leak file descriptor on read("/path/")
+
+---
+ pygraphviz/agraph.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/pygraphviz/agraph.py b/pygraphviz/agraph.py
+index d1a19cd..c332231 100644
+--- a/pygraphviz/agraph.py
++++ b/pygraphviz/agraph.py
+@@ -1252,6 +1252,9 @@ class AGraph:
+                 self._update_handle_references()
+         except OSError:
+             print("IO error reading file")
++        finally:
++            if hasattr(fh, "close") and not hasattr(path, "write"):
++                fh.close()
+ 
+     def write(self, path=None):
+         """Write graph in dot format to file on path.
+-- 
+2.33.0
+
