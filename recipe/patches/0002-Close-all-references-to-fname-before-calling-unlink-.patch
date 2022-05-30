@@ -1,0 +1,49 @@
+From a7572a6446c6f2fbd8092fc063875d3fe0f273bb Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Mon, 30 May 2022 11:15:42 -0400
+Subject: [PATCH 2/2] Close all references to fname before calling
+ unlink(fname)
+
+---
+ pygraphviz/tests/test_edge_attributes.py | 2 ++
+ pygraphviz/tests/test_readwrite.py       | 6 ++++++
+ 2 files changed, 8 insertions(+)
+
+diff --git a/pygraphviz/tests/test_edge_attributes.py b/pygraphviz/tests/test_edge_attributes.py
+index e436855..fa123dc 100644
+--- a/pygraphviz/tests/test_edge_attributes.py
++++ b/pygraphviz/tests/test_edge_attributes.py
+@@ -49,6 +49,8 @@ def test_anonymous_edges():
+ 
+     ans = """graph test { a -- b [label=edge1]; a -- b [label=edge2]; }"""
+     assert stringify(A) == " ".join(ans.split())
++
++    A.close()
+     os.unlink(fname)
+ 
+ 
+diff --git a/pygraphviz/tests/test_readwrite.py b/pygraphviz/tests/test_readwrite.py
+index 45e9f37..b6b27c9 100644
+--- a/pygraphviz/tests/test_readwrite.py
++++ b/pygraphviz/tests/test_readwrite.py
+@@ -17,6 +17,9 @@ def test_readwrite():
+     assert A == B
+     assert B == A
+     assert B is not A
++
++    A.close()
++    B.close()
+     os.unlink(fname)
+ 
+ 
+@@ -33,4 +36,7 @@ def test_readwrite_pathobj():
+     assert A == B
+     assert B == A
+     assert B is not A
++
++    A.close()
++    B.close()
+     os.unlink(fname)
+-- 
+2.31.1
+
