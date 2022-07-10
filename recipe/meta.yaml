@@ -15,7 +15,7 @@ source:
     - patches/0002-AGraph-Don-t-leak-file-descriptor-on-read-path.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
