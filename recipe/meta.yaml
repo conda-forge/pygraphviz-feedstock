@@ -10,9 +10,6 @@ source:
   # For some reason there are no .gz files here
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: 457e093a888128903251a266a8cc16b4ba93f3f6334b3ebfed92c7471a74d867
-  patches:
-    - patches/0001-Ensure-define_macros-remains-a-list-on-Windows.patch
-    - patches/0002-AGraph-Don-t-leak-file-descriptor-on-read-path.patch
 
 build:
   number: 0
