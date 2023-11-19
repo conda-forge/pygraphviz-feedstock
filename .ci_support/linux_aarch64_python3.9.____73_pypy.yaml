@@ -15,7 +15,7 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 graphviz:
-- '8'
+- '9'
 pin_run_as_build:
   graphviz:
     max_pin: x
@@ -26,6 +26,3 @@ python:
 - 3.9.* *_73_pypy
 target_platform:
 - linux-aarch64
-zip_keys:
-- - python
-  - channel_sources
