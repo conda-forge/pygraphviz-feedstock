@@ -12,7 +12,7 @@ source:
   sha256: 6ad8aa2f26768830a5a1cfc8a14f022d13df170a8f6fdfd68fd1aa1267000964
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -25,6 +25,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
+    - setuptools
     - pip
     - graphviz
   run:
