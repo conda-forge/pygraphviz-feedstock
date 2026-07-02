@@ -23,6 +23,7 @@ requirements:
     - pkg-config
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - swig
   host:
     - python
     - setuptools
