@@ -1,20 +1,18 @@
 {% set name = "pygraphviz" %}
-{% set version = "1.14" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   # For some reason there are no .gz files here
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c10df02377f4e39b00ae17c862f4ee7e5767317f1c6b2dfd04cea6acc7fc2bea
-  patches:
-    - patches/0001-Fix-types.patch
+  sha256: 7cc6cfff4bfa6c1bf389cbbf72f5995a717c69de69c18763544c04b41181f59e
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
