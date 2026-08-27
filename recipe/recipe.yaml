@@ -42,10 +42,7 @@ tests:
         - pygraphviz
         - pygraphviz.tests
       pip_check: true
-  - files:
-      source:
-        - pygraphviz/tests
-    requirements:
+  - requirements:
       run:
         - pytest
     script:
