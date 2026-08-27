@@ -1,23 +1,21 @@
 schema_version: 1
 
 context:
-  name: pygraphviz
-  version: "1.14"
+  version: "2.0.1"
 
 package:
-  name: ${{ name|lower }}
+  name: pygraphviz
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: c10df02377f4e39b00ae17c862f4ee7e5767317f1c6b2dfd04cea6acc7fc2bea
+  url: https://pypi.org/packages/source/p/pygraphviz/pygraphviz-${{ version }}.tar.gz
+  sha256: 6f9850617f9444517641d2e14dfdb99ae8294cf7657be86c031fee8f7c54f863
   patches:
-    - patches/0001-Fix-types.patch
+    - patches/lib-paths.patch
 
 build:
-  number: 3
-  skip: match(python, "<3.10")
-  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -30,7 +28,8 @@ requirements:
     - ${{ stdlib("c") }}
   host:
     - python
-    - setuptools
+    - setuptools >=78
+    - swig >4.1.0
     - pip
     - graphviz
   run:
