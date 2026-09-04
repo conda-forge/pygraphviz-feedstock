@@ -14,7 +14,7 @@ source:
     - patches/lib-paths.patch
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
