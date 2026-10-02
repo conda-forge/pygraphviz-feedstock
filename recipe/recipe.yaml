@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.0.2"
+  version: "2.0.3"
 
 package:
   name: pygraphviz
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pygraphviz/pygraphviz-${{ version }}.tar.gz
-  sha256: e3a0a0da443af50277f98de0a73932a8f3fc3dc39685911e94b58111e153a8cc
+  sha256: e46818608638959ceabec66a36d2efc1d60b790a845f29705e403feecc7ee0c0
   patches:
     - patches/lib-paths.patch
 
